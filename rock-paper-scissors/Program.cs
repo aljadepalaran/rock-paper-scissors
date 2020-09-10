@@ -22,6 +22,12 @@ namespace rock_paper_scissors
 
             UserPick();
 
+            // add score indicator
+            // add input validation for choices outside 1,2,3
+            // indent outputs
+            // change input to string
+            // find better way to compare
+
             Console.ReadLine();
 
         }
