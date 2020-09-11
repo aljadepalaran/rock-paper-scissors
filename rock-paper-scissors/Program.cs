@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -22,8 +23,6 @@ namespace rock_paper_scissors
 
             UserPick();
 
-            // add score indicator
-            // add input validation for choices outside 1,2,3
             // indent outputs
             // change input to string
             // find better way to compare
@@ -37,9 +36,13 @@ namespace rock_paper_scissors
 
             int choice;
 
-            Console.WriteLine("1. Rock" +
-                   "2. Paper" +
-                   "3. Scissors");
+            Console.WriteLine("Score: " + userScore);
+
+            Console.WriteLine();
+
+            Console.WriteLine("1. Rock \n" +
+                   "2. Paper \n" +
+                   "3. Scissors \n");
 
             Console.Write("Please enter your choice (1/2/3): ");
 
@@ -57,6 +60,8 @@ namespace rock_paper_scissors
                     Compare("scissor");
                     break;
                 default:
+                    Console.WriteLine("Invalid choice! Try again.");
+                    UserPick();
                     break;
 
             }
