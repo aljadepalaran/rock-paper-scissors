@@ -93,7 +93,7 @@ namespace rock_paper_scissors
 
         }
 
-        public static int Compare(string choice)
+        public static void Compare(string choice)
         {
 
             string machineChoice = GenerateChoice();
@@ -143,8 +143,6 @@ namespace rock_paper_scissors
                     ChangeScore(0); // draw
                 }
             }
-
-            return 0; // 0 = draw, 1 = win, 2 = loss
  
         }
 
